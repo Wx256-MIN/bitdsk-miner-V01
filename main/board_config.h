@@ -1,3 +1,4 @@
+#include "driver/uart.h"
 /**
  * board_config.h
  *
