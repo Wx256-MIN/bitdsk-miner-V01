@@ -1,3 +1,4 @@
+#include "driver/uart.h"
 /**
  * bm1397.c — see bm1397.h for the confidence note on which parts of this
  * file are architecturally verified vs. this project's own best-effort
