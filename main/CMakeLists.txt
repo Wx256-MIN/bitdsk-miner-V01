@@ -24,5 +24,5 @@ idf_component_register(
         json
         lwip
         esp_system
-    EMBED_FILES "webui/index.html"
+    EMBED_FILES "index.html"
 )
