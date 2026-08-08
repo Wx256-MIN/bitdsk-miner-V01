@@ -1,4 +1,7 @@
-#include <stdlib.h>
+/**
+ * web_server.c — see header.
+ */
+
 #include <string.h>
 #include "web_server.h"
 #include "global_state.h"
@@ -40,7 +43,6 @@ static esp_err_t handle_system_info(httpd_req_t *req)
     cJSON_AddNumberToObject(root, "current", g_state.current_ma);
     cJSON_AddNumberToObject(root, "fanPercent", g_state.fan_percent);
     cJSON_AddNumberToObject(root, "fanRpm", g_state.fan_rpm);
-    cJSON_AddBoolToObject(root, "isUsingFallbackStratum", false);
     cJSON_AddBoolToObject(root, "wifiConnected", g_state.wifi_connected);
     cJSON_AddStringToObject(root, "ipAddress", g_state.ip_addr);
     cJSON_AddBoolToObject(root, "stratumConnected", g_state.stratum_connected);
