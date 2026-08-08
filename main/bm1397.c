@@ -308,7 +308,12 @@ bool bm1397_send_job(const bm1397_job_t *job)
     uint16_t crc = crc16_bm1397(&packet[2], idx - 2);
     packet[idx++] = (uint8_t)(crc >> 8);
     packet[idx++] = (uint8_t)(crc);
+bool bm1397_send_job(/* parameters */)
+{
+    // ... existing job sending logic ...
 
+    return serial_write(ASIC_UART_PORT, packet, idx) == idx;
+}
     return serial_write(ASIC_UART_PORT, packet, idx) == idx;
 }
 
