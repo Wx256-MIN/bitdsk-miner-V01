@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <string.h>
 #include "web_server.h"
 #include "global_state.h"
