@@ -8,8 +8,16 @@
 global_state_t g_state;
 
 // Dummy implementations for nvs_config to allow compilation
-void nvs_config_set_wifi(const char* ssid, const char* pass) {}
-void nvs_config_set_pool(const char* host, int port, const char* user) {}
+void nvs_config_set_wifi(const char* ssid, const char* pass) {
+    (void)ssid;
+    (void)pass;
+}
+
+void nvs_config_set_pool(const char* host, int port, const char* user) {
+    (void)host;
+    (void)port;
+    (void)user;
+}
 
 void app_main(void)
 {
